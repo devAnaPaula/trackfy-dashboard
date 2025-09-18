@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# 📊 Dashboard - DATA ANALYTICS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto tem a finalidade de apontar apartir de um data analytics e painel interativo a quantidade de pessoas por funções e áreas ao longo do tempo (horas, dias e semanas) com gráficos dinâmicos.
 
-## Available Scripts
+A interface foi escolhida como base do próprio sistema utilizado na Trackfy, afim de causar familiarização com o escopo da página e trazer praticidade e um desenvolvimento mais rápido do projeto.
 
-In the project directory, you can run:
+## 🚀 Como rodar o projeto
 
-### `npm start`
+1.  **Clone o repositório**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    git clone https://github.com/devAnaPaula/trackfy-dashboard.git
+    cd trackfy-dashboard
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+2.  **Instale as dependências**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    npm install
 
-### `npm run build`
+3.  **Inicie o servidor de desenvolvimento**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4.  O projeto abrirá automaticamente no navegador (`http://localhost:3000`).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---------------------------------------------------------------------------------------------------------------------------------------------
 
-### `npm run eject`
+## 🛠️ Decisões técnicas adotadas
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   **React**: foi escolhido para criar a interface modular e reativa, utilizando o DOM e a extensão do JAVASCRIPT (JSX)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+-   **styled-components**: foi utilizado para garantir uma estilização dinâmica com
+    suporte a temas, afim de facilitar o desenvolvimento da interface do usuário. (`theme.colors`, `theme.radii`).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+-   **Recharts**: a biblioteca de gráficos foi usada para exibir dados em
+    **linha, barra e pizza**.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+-   **dayjs**: foi utilizado para a manipulação de datas (em um agrupamento por horas, dias ou
+    semanas).
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+-   **Arquivos Principais - ARQUITETURA**:
+    -   `App.jsx` → Ponto central da aplicação. Define as rotas usando react-router-dom e organiza o layout base (Sidebar, Header e área de conteúdo).
+    -   `Dashboard.jsx` → Página principal do sistema. Conecta os filtros aos gráficos e gerencia o estado dos dados exibidos.
+    -   `Filters.jsx` → Componente de filtros dinâmicos, permitindo seleção por função, área, tipo de área e período de tempo (horas, dias ou semanas).
+    -   `Charts.jsx` → Módulo responsável pela visualização gráfica dos dados, oferecendo diferentes tipos de gráficos (linha, barra e pizza) através do Recharts.
