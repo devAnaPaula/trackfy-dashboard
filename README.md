@@ -219,7 +219,7 @@ Durante o desenvolvimento deste projeto, algumas decisões técnicas foram tomad
 
 ---
 
-## 📸 Layout
+## Layout
 
 ### **Sidebar**
 - Colapsa automaticamente em telas pequenas.
