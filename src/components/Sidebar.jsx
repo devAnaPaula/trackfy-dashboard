@@ -123,7 +123,7 @@ export default function Sidebar({ open, setOpen }) {
 
       <Menu>
         <div onClick={handleClickItem}>{renderMenuItem("/dashboard", iconDashboard, "Dashboard")}</div>
-        <div onClick={handleClickItem}>{renderMenuItem("/map", iconCharts, "Mapa")}</div>
+        <div onClick={handleClickItem}>{renderMenuItem("/mapa", iconCharts, "Mapa")}</div>
         <div onClick={handleClickItem}>{renderMenuItem("/profile", iconUser, "Perfil")}</div>
       </Menu>
 
