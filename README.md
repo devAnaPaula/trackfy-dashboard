@@ -183,14 +183,13 @@ export default [
 
 | Rota          | Componente   | Descrição                       |
 |---------------|--------------|---------------------------------|
-| `/`           | Redirect     | Redireciona para `/dashboard`  |
+| `/`           | Redirect     | Redireciona para `/dashboard`   |
 | `/dashboard`  | Dashboard    | Visualização dos gráficos       |
 | `/mapa`       | Mapa         | Visualização do mapa interativo |
 | `/profile`    | Profile (WIP)| Página futura de perfil         |
 
 ---
-
-## 📝 Decisões Técnicas Tomadas
+## Decisões Técnicas Tomadas
 
 Durante o desenvolvimento deste projeto, algumas decisões técnicas foram tomadas para garantir **desempenho**, **manutenção** e **escalabilidade**:
 
